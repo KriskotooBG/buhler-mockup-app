@@ -1,0 +1,26 @@
+[
+    {
+      "uid": "scalemachine_837yreu",
+      "type": "scale",
+      "status": "running",
+      "displayName": "Scale"
+    },
+    {
+      "uid": "attachermachine_5r6tyfg",
+      "type": "attacher",
+      "status": "alarm",
+      "displayName": "Attacher"
+    },
+    {
+      "uid": "packermachine_46e5ryt",
+      "type": "packer",
+      "status": "running",
+      "displayName": "Packer"
+    },
+    {
+      "uid": "closermachine_67tgsnq",
+      "type": "closer",
+      "status": "warning",
+      "displayName": "Closer"
+    }
+]
