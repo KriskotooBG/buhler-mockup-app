@@ -2,6 +2,7 @@ import '../../style/css/header.css';
 
 
 
+
 export class Header{
 	private readonly tickSelf:boolean;
 
