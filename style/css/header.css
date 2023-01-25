@@ -1,10 +1,30 @@
-
-
-
-
 #mainHeader{
     height: 8vh;
     width: 100vw;
     background-color: #DCDCDC;
     border-bottom: 4px solid #05998D;
+}
+
+
+#headerLogoImage{
+	margin: 7px 5px 7px 7px;
+	height: calc(8vh - 14px);
+	width: auto;
+}
+
+#headerClockAndUserWrapper{
+	float: right;
+	display: flex;
+	align-items: stretch;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	width: 15em;
+	height: 100%;
+}
+  
+.headerClockUserElements{
+	display: inline-block;
+	display: flex;
+	align-items: center;
 }
