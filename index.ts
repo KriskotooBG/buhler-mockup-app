@@ -12,24 +12,6 @@ const productionLineOne = new ProductionLineMachines();
 
 
 
-/**
- * A small mockup function to display the machines from the file
- */
-function displayMachines():void{
-	productionLineOne.getAllMachines().forEach(machine => {
-    console.log(machine)
-    document.getElementById("underheaderNavRow").appendChild(machine.generateNavigationMarkup());
-
-
-		document.getElementById("mainViewWrapper").appendChild(machine.generateOverviewMarkup());
-    if(!productionLineOne.isLastMachine(machine.id)) document.getElementById("mainViewWrapper").appendChild(machine.generateLineMarkerMarkup());
-
-    machine.onMainClick = (id:string, event:Event) => {
-      console.log(id)
-    }
-	});
-}
-
 
 /**
  * A small mockup function to load the machines from a file
@@ -46,11 +28,26 @@ function loadMachinesFromFile():void{
 
 
 
+
+/**
+ * Init function: Entry point of the application
+ */
 function init():void{
   document.body.prepend((new Header(true)).generateMarkup());
   document.body.appendChild((new NavigationBar()).generateMarkup());
+  document.body.appendChild(productionLineOne.generateMarkup());
+
 
   loadMachinesFromFile();
-  displayMachines();
+ 
+
+
+  productionLineOne.getAllMachines().forEach(machine => {
+    document.getElementById("underheaderNavRow").appendChild(machine.generateNavigationButtonMarkup());
+
+
+		document.getElementById("mainViewWrapper").appendChild(machine.generateOverviewButtonMarkup());
+    if(!productionLineOne.isLastMachine(machine.id)) document.getElementById("mainViewWrapper").appendChild(machine.generateLineMarkerMarkup());
+	});
 }
 init();
