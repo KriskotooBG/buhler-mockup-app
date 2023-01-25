@@ -1,41 +1,17 @@
 html, body{
   width: 100vw;
   height: 100vh;
-  padding: 0;
   font-family: Sans-Serif;
   margin: 0;
+  padding: 0;
   overflow-y: hidden;
   user-select: none;
 }
 
-#mainHeader{
-  height: 8vh;
-  width: 100vw;
-  background-color: #DCDCDC;
-  border-bottom: 4px solid #05998D;
-}
 
-#headerLogoImage{
-  height: calc(8vh - 14px);
-  margin: 7px 5px 7px 7px;
-  width: auto;
-}
 
-#sysUIWrapper{
-  float: right;    display: flex;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  width: 40%;
-  height: 100%;
-}
 
-.sysUiElements{
-  display: inline-block;
-  display: flex;
-  align-items: center;
-}
+
 
 
 #underheaderNavRow{

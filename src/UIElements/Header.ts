@@ -1,10 +1,9 @@
+import '../../style/css/header.css';
 
 
 
-
-export class HeaderUI{
+export class Header{
 	private readonly tickSelf:boolean;
-	private _clockElement:HTMLSpanElement;
 
 
 	/**
@@ -42,14 +41,13 @@ export class HeaderUI{
 
 
 		const clockIcon = document.createElement("span");
-		clockIcon.classList.add("material-icons");
+		clockIcon.classList.add("material-icons-outlined");
 		clockIcon.innerText = "schedule";
 
 
 		const clockDisplayElem = document.createElement("span");
 		clockDisplayElem.setAttribute("id", "headerClockDisplay");
 		clockDisplayElem.innerText = (new Date()).toLocaleString();
-		this._clockElement = clockDisplayElem;
 
 		
 		clockWrapperElem.appendChild(clockIcon);
@@ -77,11 +75,14 @@ export class HeaderUI{
 		accountDisplayWrapper.appendChild(usernameDisplayElem);
 
 
+		clockAndUserWrapper.appendChild(clockWrapperElem);
+		clockAndUserWrapper.appendChild(accountDisplayWrapper);
+
+
 
 
 		headerElem.appendChild(logoImage);
-		headerElem.appendChild(clockWrapperElem);
-		headerElem.appendChild(accountDisplayWrapper);
+		headerElem.appendChild(clockAndUserWrapper);
 
 
 
@@ -99,6 +100,6 @@ export class HeaderUI{
 	 * Here, it is used to update the clock on the header.
 	 */
 	public tick():void{
-		if(this._clockElement) this._clockElement.innerText = (new Date()).toLocaleString();
+		document.getElementById("headerClockDisplay").innerText = (new Date()).toLocaleString();
 	}
 }

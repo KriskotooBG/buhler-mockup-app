@@ -1,7 +1,7 @@
 import './style/css/style.css';
 
 import machines_db from './mockupdb/machines.json'
-import { HeaderUI } from './src/UIElements/HeaderUI';
+import { Header } from './src/UIElements/Header';
 import { ProductionLineMachines } from './src/TypeScript/ProductionLineMachines';
 import { Machine } from './src/TypeScript/Machine';
 
@@ -46,7 +46,7 @@ function loadMachinesFromFile():void{
 
 
 function init():void{
-  document.getElementById("mainHeader").appendChild((new HeaderUI(true)).generateMarkup());
+  document.body.prepend((new Header(true)).generateMarkup());
 
   loadMachinesFromFile();
   displayMachines();
