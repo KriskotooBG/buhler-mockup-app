@@ -14,17 +14,22 @@
 
 #headerClockAndUserWrapper{
 	float: right;
-	display: flex;
-	align-items: stretch;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-around;
-	width: 15em;
-	height: 100%;
+    display: flex;
+    width: 23.5em;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+	justify-content: space-between;
+	margin-right: 10px;
 }
   
+
+#headerUsernameDisplay, #headerClockDisplay{
+    margin-left: 10px;
+}
+
 .headerClockUserElements{
-	display: inline-block;
-	display: flex;
+	font-weight: 600;
+	display: inline-flex;
 	align-items: center;
 }
