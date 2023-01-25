@@ -18,7 +18,10 @@ export class Header{
 
 
 
-
+	/**
+	 * Generates the markup required to display the Header element.
+	 * @returns {HTMLElement} The header element markup.
+	 */
 	public generateMarkup():HTMLElement{
 		const headerElem = document.createElement("header");
 		headerElem.setAttribute("id", "mainHeader");
