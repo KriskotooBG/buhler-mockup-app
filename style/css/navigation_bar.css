@@ -1,0 +1,8 @@
+#underheaderNavRow{
+	background-color: #DCDCDC;
+    height: 8vh;
+    width: 100vw;
+    overflow-x: auto;
+	display: flex;
+    flex-direction: row;
+}

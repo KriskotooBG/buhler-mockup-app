@@ -2,8 +2,9 @@ import './style/css/style.css';
 
 import machines_db from './mockupdb/machines.json'
 import { Header } from './src/UIElements/Header';
+import { NavigationBar } from './src/UIElements/NavigationBar';
 import { ProductionLineMachines } from './src/TypeScript/ProductionLineMachines';
-import { Machine } from './src/TypeScript/Machine';
+import { Machine } from './src/UIElements/Machine';
 
 
 const productionLineOne = new ProductionLineMachines();
@@ -47,6 +48,7 @@ function loadMachinesFromFile():void{
 
 function init():void{
   document.body.prepend((new Header(true)).generateMarkup());
+  document.body.appendChild((new NavigationBar()).generateMarkup());
 
   loadMachinesFromFile();
   displayMachines();
