@@ -73,7 +73,7 @@ export class Header{
 
 		const usernameDisplayElem = document.createElement("span");
 		usernameDisplayElem.setAttribute("id", "headerUsernameDisplay");
-		usernameDisplayElem.innerText = "Administrator";
+		usernameDisplayElem.innerText = "Operator";
 
 
 		accountDisplayWrapper.appendChild(userIcon);
