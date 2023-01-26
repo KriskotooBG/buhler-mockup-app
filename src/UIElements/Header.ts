@@ -1,4 +1,5 @@
 import '../../style/css/header.css';
+import '../../style/icons/Logo_Buhler_AG.png';
 
 
 
@@ -30,7 +31,7 @@ export class Header{
 		const logoImage = document.createElement("img");
 		logoImage.setAttribute("id", "headerLogoImage");
 		logoImage.setAttribute("alt", "Buhler logo");
-		logoImage.src = "../style/icons/Logo_Bühler_AG.png";
+		logoImage.src = "./style/icons/Logo_Buhler_AG.png";
 
 
 
